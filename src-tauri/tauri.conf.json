@@ -55,11 +55,11 @@
     },
     "windows": [
       {
-        "fullscreen": false,
-        "height": 600,
-        "resizable": true,
         "title": "Slash Commands Configurator",
-        "width": 800
+        "height": 600,
+        "width": 800,
+        "fullscreen": false,
+        "resizable": true
       }
     ]
   }

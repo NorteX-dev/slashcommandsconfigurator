@@ -1,10 +1,11 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Button, Container, TextInput, Title } from "@mantine/core";
 import useBot from "./hooks/useBot";
+import CommandList from "./components/CommandList";
 
 function App() {
 	const [token, setToken] = useState("");
-	const { value, loading, connect } = useBot();
+	const { bot, loading, connect } = useBot();
 
 	function updateToken(event: any) {
 		setToken(event.target.value);
@@ -27,8 +28,7 @@ function App() {
 				/>
 				<Button onClick={submit}>Connect</Button>
 			</div>
-			<pre>{JSON.stringify("loading:" + loading, null, 2)}</pre>
-			<pre>{JSON.stringify(value, null, 2)}</pre>
+			<CommandList />
 		</Container>
 	);
 }
